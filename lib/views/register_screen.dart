@@ -59,14 +59,14 @@ class RegisterScreen extends StatelessWidget {
                         'REGISTER',
                         style: Theme.of(context)
                             .textTheme
-                            .headline4
+                            .headlineMedium
                             ?.copyWith(color: Colors.black),
                       ),
                       Text(
                         'register now to browse our offers',
                         style: Theme.of(context)
                             .textTheme
-                            .bodyText1
+                            .bodyMedium
                             ?.copyWith(color: Colors.grey),
                       ),
                       const SizedBox(

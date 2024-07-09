@@ -22,10 +22,11 @@ class LoginScreen extends StatelessWidget {
         child: BlocConsumer<LoginCubit, LoginState>(listener: (context, state) {
           if (state is LoginSuccess) {
             if (state.loginModel.status == true) {
-              CacheHelper.saveData('token', state.loginModel.data?.token).then((value) {
+              CacheHelper.saveData('token', state.loginModel.data?.token)
+                  .then((value) {
                 Navigator.pushReplacement(
                     context,
-                    MateriaatlPageRoute(
+                    MaterialPageRoute(
                       builder: (context) => const HomePage(),
                     ));
               });
@@ -54,14 +55,14 @@ class LoginScreen extends StatelessWidget {
                         'LOGIN',
                         style: Theme.of(context)
                             .textTheme
-                            .headline4
+                            .headlineMedium
                             ?.copyWith(color: Colors.black),
                       ),
                       Text(
                         'login now to browse our offers',
                         style: Theme.of(context)
                             .textTheme
-                            .bodyText1
+                            .bodyMedium
                             ?.copyWith(color: Colors.grey),
                       ),
                       const SizedBox(

@@ -24,7 +24,7 @@ class CategoriesScreen extends StatelessWidget {
                     color: Colors.grey[300],
                   ),
                 ),
-            itemCount: categoriesModel!.data!.data!.length);
+            itemCount: categoriesModel.data!.data!.length);
       },
     );
   }
